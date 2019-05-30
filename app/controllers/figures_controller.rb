@@ -39,4 +39,6 @@ class FiguresController < ApplicationController
 
     @figure.save
   end
+
+  patch '/figures/:id'
 end
