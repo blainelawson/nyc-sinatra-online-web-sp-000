@@ -43,7 +43,7 @@ class FiguresController < ApplicationController
   patch '/figures/:id' do
     @figure = Figure.find_by_id(params[:id])
     @figure = params[:figure]
-    
+
     if !params[:title][:name].empty?
       # binding.pry
       @figure.titles << Title.create(params[:title])
