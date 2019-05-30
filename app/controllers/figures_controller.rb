@@ -55,7 +55,6 @@ class FiguresController < ApplicationController
 
     @figure.save
 binding.pry
-
-
+    redirect '/figures/:id'
   end
 end
