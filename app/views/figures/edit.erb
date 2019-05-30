@@ -1,4 +1,4 @@
-<form method="post" action="/figures">
+<form method="post" action="/figures/<%=@figure.id%>">
   <input type="hidden" id="hidden" name="_method" value="patch">
   <p><h1><label for="figure_name">Name: </label><input type="text" name="figure[name]" id="figure_name" value="<%=@figure.name%>"></h1></p>
   <p><h3><label for="titles">Titles</label></h3>
