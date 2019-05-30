@@ -3,6 +3,10 @@ class LandmarksController < ApplicationController
     erb :'/landmarks/new'
   end
 
+  get '/landmarks/:id' do
+    erb :"/landmarks/#{params[:id]}"
+  end
+
   post '/landmarks' do
     @landmark = Landmark.create(params[:landmark])
 
