@@ -42,10 +42,8 @@ class FiguresController < ApplicationController
 
   patch '/figures/:id' do
     @figure = Figure.find_by_id(params[:id])
-    @figure.name = params[:figure][:name]
-    binding.pry
-    @figure.title_ids = params[:titles]
-    @figure.landmark_ids = params[:landmarks]
+    @figure = params[:figure]
+    
     if !params[:title][:name].empty?
       # binding.pry
       @figure.titles << Title.create(params[:title])
