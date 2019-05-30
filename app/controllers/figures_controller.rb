@@ -11,6 +11,10 @@ class FiguresController < ApplicationController
     erb :index
   end
 
+  get '/figures/:id' do
+    erb :show
+  end
+
   post '/figures' do
     # binding.pry
 
