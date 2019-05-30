@@ -5,6 +5,10 @@ class FiguresController < ApplicationController
     erb :'/figures/new'
   end
 
+  get '/figures' do
+    erb:
+  end
+
   post '/figures' do
     # binding.pry
 
@@ -16,5 +20,7 @@ class FiguresController < ApplicationController
     if !params[:landmark][:name].empty?
       @figure.landmarks << Landmark.create(params[:landmark])
     end
+
+    @figure.save
   end
 end
